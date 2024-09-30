@@ -59,3 +59,12 @@ Next.js does code splitting by routes, so it does not ship the full app, when th
 
 Furthermore, in production, whenever `<Link>` components appear in the browser's viewport, Next.js automatically prefetches the code for the linked route in the background.
 
+# Other remarks
+
+Some React hooks (like `useState`) will only work if you add the
+```
+'use client';
+```
+directive at the *top of the file*. This tells Next.js to ship this component
+with all imports as JavaScript to the client. How that stuff is loaded
+depends on whether we do a full page load or perform navigation.
