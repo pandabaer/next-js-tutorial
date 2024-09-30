@@ -49,3 +49,13 @@ The components from the page.tsx files will be rendered as a child of the "layou
 The "layout" won't rerender, when going to a sub-page (partial rendering).
 
 Also mind the `RootLayout`, which was used to add global styles.
+
+## Links
+
+Why optimize links? A regular `<a href="...">` leads to a full page refresh!
+With `<Link>` you only load the `page` part.
+
+Next.js does code splitting by routes, so it does not ship the full app, when the root page is opened (as a normal React SPA would do). This also means that if a certain page throws an error, the rest of the application will still work.
+
+Furthermore, in production, whenever `<Link>` components appear in the browser's viewport, Next.js automatically prefetches the code for the linked route in the background.
+
