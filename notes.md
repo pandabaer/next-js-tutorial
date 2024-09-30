@@ -23,5 +23,13 @@ Problem with plain CSS. If you define styling classes and you change them,
 it's hard to figure, which components use them and whether you broke something
 
 
+# image optimization
 
+Image optimization features:
 
+* Preventing layout shift automatically when images are loading.
+* Resizing images to avoid shipping large images to devices with a smaller viewport.
+* Lazy loading images by default (images load as they enter the viewport).
+* Serving images in modern formats, like WebP
+  and AVIF
+  , when the browser supports it.
