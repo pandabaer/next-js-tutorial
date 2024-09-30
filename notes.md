@@ -33,3 +33,19 @@ Image optimization features:
 * Serving images in modern formats, like WebP
   and AVIF
   , when the browser supports it.
+
+# Routing
+
+## Layout
+
+some part of the page, that is common across different routes (URL paths or in Next.js-lingo: "pages").
+May contain:
+* header
+* footer
+* sidebar
+
+The components from the page.tsx files will be rendered as a child of the "layout".
+
+The "layout" won't rerender, when going to a sub-page (partial rendering).
+
+Also mind the `RootLayout`, which was used to add global styles.
